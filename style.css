@@ -1,0 +1,86 @@
+:root {
+  --bg: #ffffff;
+  --card: #f8f8f8;
+  --accent: #333333;
+  --text: #222222;
+  --muted: #666666;
+  --border: #dddddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 24px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+button {
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #f2f2f2;
+  transform: translateY(-1px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tile {
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  user-select: none;
+}
+
+.tile.empty {
+  background: #ffffff;
+  border-color: #eeeeee;
+}
+
+.message {
+  margin-top: 18px;
+  min-height: 1.4rem;
+  color: var(--muted);
+  font-weight: 600;
+}
